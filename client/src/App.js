@@ -1,9 +1,12 @@
+import Login from './pages/Login/Login';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
   return (
-    <div>
-        <h1>Opening Screen</h1>
+    <div className="container">
+        <Login />
     </div>
   );
 }
