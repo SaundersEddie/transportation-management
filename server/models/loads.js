@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const strategy = require("../passport/localStrategy");
 const Schema = mongoose.Schema;
 
-const loadSchema = new Schema({
-  shipperDetails: {{
+const loadsSchema = new Schema({
+  shipperDetails: {
       shipperName: {
           type: String,
           required: true
@@ -28,7 +28,7 @@ const loadSchema = new Schema({
           type: String,
           required: true
       }
-  }},
+  },
   consigneeDetails: {
     type: String,
     required: true

@@ -11,7 +11,7 @@ const morgan = require ("morgan");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 const dbConnection = require("./databaseConnection/dbConnect.js");
-// const passport = require("./passport");
+const passport = require("./passport");
 
 // Setour Routes and DB connection
 const routes = require("./routes");
@@ -34,8 +34,8 @@ app.use(
 );
 
 // Passport
-//app.use(passport.initialize());
-//app.use(passport.session()); // will call the deserializeUser
+app.use(passport.initialize());
+app.use(passport.session()); // will call the deserializeUser
 
 // If its production environment!
 if (process.env.NODE_ENV === "production") {
@@ -51,7 +51,7 @@ if (process.env.NODE_ENV === "production") {
   }
 
   // Add routes, both API and view
-// app.use(routes);
+app.use(routes);
 
 // Error handler
 app.use(function (err, req, res, next) {

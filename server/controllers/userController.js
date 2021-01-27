@@ -1,16 +1,20 @@
 const db = require('../models');
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcrypt')
 
 // Defining methods for the userController
 module.exports = {
+
   getUser: (req, res, next) => {
-    if (req.user) {
-      return res.json({ user: req.user });
+    console.log ("getUser:", req.body)
+    if (req.body.userName) {
+      return res.json({ user: req.body.userName });
     } else {
       return res.json({ user: null });
     }
   },
+
   getUsers: (req, res) => {
+    console.log ("Inside getUsers: ",req.data);
     if (req.user) {
       db.User.find({})
       .then((users) => {
@@ -23,6 +27,7 @@ module.exports = {
       return res.json({ user: null });
     }
   },
+
   getUserInfo: (req, res) => {
     if (req.user) {
       db.User.find({
@@ -156,6 +161,8 @@ module.exports = {
       return res.json({ user: null });
     }
   },
+
+  // Register User - EXS 27th January 2021
   register: (req, res) => {
     const { firstName, lastName, userName, password, userEmail, friends, userInterest, profileImg } = req.body;
     // ADD VALIDATION
@@ -170,10 +177,7 @@ module.exports = {
         lastName: lastName,
         userName: userName,
         password: password,
-        userEmail: userEmail,
-        friends: friends,
-        userInterest: userInterest,
-        profileImg: profileImg
+        userEmail: userEmail
       });
       newUser.save((err, savedUser) => {
         if (err) return res.json(err);
@@ -181,6 +185,8 @@ module.exports = {
       });
     });
   },
+
+
   logout: (req, res) => {
     if (req.user) {
       req.session.destroy();

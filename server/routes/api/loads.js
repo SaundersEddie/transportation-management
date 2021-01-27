@@ -1,16 +1,16 @@
 const router = require("express").Router();
-const loadssController = require("../../controllers/loadsController");
+const loadsController = require("../../controllers/loadsController");
 
 // Matches with "/api/loads"
 router.route("/")
-  .get(reviewsController.findAll)
-  .post(reviewsController.create);
+  .get(loadsController.findAll)
+  .post(loadsController.create);
 
   // Matches with "/api/loads/:id"
  router.route("/:id")
-  .get(reviewsController.findById);
+  .get(loadsController.findById);
 
   router.route("/:id")
-  .put(reviewsController.addComment);
+  .put(loadsController.addComment);
 
 module.exports = router;
