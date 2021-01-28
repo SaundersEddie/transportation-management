@@ -1,17 +1,8 @@
 // Our user models
-
 import mongoose from 'mongoose';
-// import bcrypt from 'bcrypt';
-// const mongoose = require('mongoose')
-// const Schema = mongoose.Schema
-// const bcrypt = require('bcrypt')
-// mongoose.promise = Promise
+import bcrypt from 'bcrypt';
 
 // Define userSchema
-// EXS 18th July 2020 - Create reference from user to userInfo
-
-console.log("We are in server model user.js");
-
 const userSchema = mongoose.Schema({
   firstName: { 
     type: String, 
@@ -41,24 +32,24 @@ const userSchema = mongoose.Schema({
 });
 
 // Define schema methods
-// userSchema.methods = {
-//   checkPassword: function (inputPassword) {
-//     return bcrypt.compareSync(inputPassword, this.password)
-//   },
-//   hashPassword: plainTextPassword => {
-//     return bcrypt.hashSync(plainTextPassword, 10)
-//   }
-// }
+userSchema.methods = {
+  checkPassword: function (inputPassword) {
+    return bcrypt.compareSync(inputPassword, this.password)
+  },
+  hashPassword: plainTextPassword => {
+    return bcrypt.hashSync(plainTextPassword, 10)
+  }
+}
 
-// // Define hooks for pre-saving
-// userSchema.pre('save', function (next) {
-//   if (!this.password) {
-//     next()
-//   } else {
-//     this.password = this.hashPassword(this.password)
-//     next()
-//   }
-// })
+// Define hooks for pre-saving
+userSchema.pre('save', function (next) {
+  if (!this.password) {
+    next()
+  } else {
+    this.password = this.hashPassword(this.password)
+    next()
+  }
+})
 
 // Create reference to User & export
 const User = mongoose.model('User', userSchema)

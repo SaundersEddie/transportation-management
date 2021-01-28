@@ -1,12 +1,10 @@
-// const router = require("express").Router();
-// const loadsController = require("../../controllers/loadsController");
+// Our Routes load
 
 import express from 'express';
-import {findAll, createLoad} from '../../controllers/loadsController';
+import {allLoads, createLoad} from '../controllers/loadController.js';
+const router = express.Router();
 
-const router=express.Router();
-
-router.get ('/', findAll);
+router.get ('/', allLoads);
 router.post ('/', createLoad);
 
 // Matches with "/api/loads"
@@ -21,4 +19,4 @@ router.post ('/', createLoad);
   // router.route("/:id")
   // .put(loadsController.addComment);
 
-module.exports = router;
+export default router;

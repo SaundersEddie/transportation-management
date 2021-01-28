@@ -1,13 +1,14 @@
-const ObjectId = require("mongoose").Types.ObjectId;
-const db = require("../models");
+import Load from '../models/load.js';
 
+// const ObjectId = require("mongoose").Types.ObjectId;
+// const db = require("../models");
 // Defining methods for the reviewsController
 // module.exports = {
 
-  export const findAll = async (req, res) => {
+  export const allLoads = async (req, res) => {
     console.log ("Inside our Find Loads Controller: ", req.data);
     try {
-      const allLoads = await db.loads.find();
+      const allLoads = await Load.find();
       res.status(200).json(allLoads);
     } catch(error) {
       res.status(400).json({message: error.message});
@@ -17,7 +18,7 @@ const db = require("../models");
   export const createLoad = async (req, res) => {
     console.log ("Creating Load: ", req.body)
     const addLoadBody = req.body;
-    const newLoad = await new db.loads(addLoadBody);
+    const newLoad = await new Load(addLoadBody);
     try {
       newLoad.save();
       res.status(200).json({message: newLoad })
