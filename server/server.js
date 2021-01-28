@@ -2,8 +2,10 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
-import morgan from 'morgan';
-import passport from 'passport';
+// import morgan from 'morgan';
+// import passport from 'passport';
+// import ourLoads from './routes/api/loads';
+import ourUsers from './routes/user.js';
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -18,11 +20,12 @@ if (process.env.NODE_ENV !== "production") {
   }
 
 // const routes = require("./routes");
-// 
+ 
 
 mongoose.connect(ATLAS_URI, 
                 {useNewUrlParser: true, 
                 useCreateIndex: true,
                 useUnifiedTopology: true })
         .then(() => app.listen(PORT, () => console.log(`API Server listening on ${PORT}`)))
+        .then(() => app.use('/users', ourUsers))
         .catch((error) => console.log("An Error Occurred: ", error));
