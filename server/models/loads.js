@@ -3,32 +3,26 @@ const strategy = require("../passport/localStrategy");
 const Schema = mongoose.Schema;
 
 const loadsSchema = new Schema({
-  shipperDetails: {
+  shipperDetails: ({
       shipperName: {
           type: String,
-          required: true
-      },
+          required: true},
       shipperAddress1: {
           type: String,
-          required: true
-      },
-      shipperAddress2: {
+          required: true},
+      shipperAddress2:{
           type: String,
-          required: false
-      },
-      shipperCity: {
+          required: false},
+      shipperCity:{
           type: String,
-          required: true
-      },
-      shipperState: {
+          required: true},
+      shipperState:{
           type: String,
-          required: true
-      },
-      shipperZip: {
+          required: true},
+      shipperZip:{
           type: String,
-          required: true
-      }
-  },
+          required: true},
+  }),
   consigneeDetails: {
     type: String,
     required: true
