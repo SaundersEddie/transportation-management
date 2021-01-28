@@ -74,11 +74,15 @@ const loadSchema = mongoose.Schema({
      shipLength: {
        type: Number,
        required: true
-   },
+    },
+      shipUOM: {
+        type: String,
+        required: true
+    }
    }),
    shipCommodity: {
      type: String,
-     required: true,
+     required: true
    },
    shipWeight: {
     type: Number,
@@ -87,7 +91,28 @@ const loadSchema = mongoose.Schema({
    shipNotes: {
      type: String,
      required: false
-   }
+   },
+   shipHazardous: ({
+     shipHazard: {
+       type: Boolean,
+       required: true
+   },
+      shipUN: {
+        type: String,
+        required: false
+    },
+    }),
+    shipComments: ({
+      shipComm: {
+        type: Array,
+        required: false
+      }
+    }),
+    shipmentNumber: {
+      type: String,
+      required: true,
+      
+    }
   })
 });
 

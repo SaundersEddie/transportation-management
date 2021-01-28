@@ -19,9 +19,6 @@ if (process.env.NODE_ENV !== "production") {
     console.log("loading dev environment.");
   }
 
-// const routes = require("./routes");
- 
-
 mongoose.connect(ATLAS_URI, 
                 {useNewUrlParser: true, 
                 useCreateIndex: true,
