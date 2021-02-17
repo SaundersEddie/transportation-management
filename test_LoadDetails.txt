@@ -1,0 +1,45 @@
+{
+    "shipperDetails": {
+        "shprName": "ACME Co",
+        "shprAddress1": "123 Main St",
+        "shprAddress2": "",
+        "shprCity": "Any City",
+        "shprState": "DC",
+        "shprZip": "20021"
+    },
+    "consigneeDetails": {
+        "cnseName": "Roadrunner",
+        "cnseAddress1": "436 Any St", 
+        "cnseAddress2": "",
+        "cnseCity": "Raleigh",
+        "cnseState": "NC",
+        "cnseZip": "27603"
+    },
+    "thirdPartyDetails": {
+        "thrdName": "Test Third",
+        "thrdAddress1": "2468 Main Road", 
+        "thrdAddress2": "",
+        "thrdCity": "New York City",
+        "thrdState": "NY",
+        "thrdZip": "12345"
+    },
+    "shipmentDetails": {
+        "shipDims": {
+            "shipWidth": 24,
+            "shipHeight": 24,
+            "shipLength": 24,
+            "shipUOM": "inches"
+        },
+        "shipCommodity": "widgets",
+        "shipWeight": 24,
+        "shipNotes": "No notes",
+        "shipHazardous": {
+            "shipHazard": false,
+            "shipUN": "1234"
+        },
+        "shipComments": {
+            "shipComm": "Test Comments"
+        },
+        "shipmentNumber": "EXS001"
+    }
+}

@@ -44,22 +44,22 @@ const loadSchema = mongoose.Schema({
   thirdPartyDetails: ({
     thrdName: {
       type: String,
-      required: true},
+      required: false},
     thrdAddress1: {
       type: String,
-      required: true},
+      required: false},
     thrdAddress2:{
       type: String,
       required: false},
     thrdCity:{
       type: String,
-      required: true},
+      required: false},
     thrdState:{
       type: String,
-      required: true},
+      required: false},
     thrdZip:{
       type: String,
-      required: true},
+      required: false},
   }),
   shipmentDetails: ({
    shipDims: ({

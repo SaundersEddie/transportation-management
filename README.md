@@ -8,3 +8,7 @@ This project was started on January 23rd 2021, the initial goal is to create a t
 
 January 23rd 2021 - Initial Build  
 February 17th 2021 - Installation of Jest, Selenium-Webdriver, and Nodemon as Dev Dependencies
+
+## Goals
+
+The general goals is to have the majority of code being on the backend to keep our front end clean looking.

@@ -1,7 +1,6 @@
 import Load from '../models/load.js';
 
   export const allLoads = async (req, res) => {
-    console.log ("Inside our Find Loads Controller: ", req.data);
     try {
       const allLoads = await Load.find();
       res.status(200).json(allLoads);
