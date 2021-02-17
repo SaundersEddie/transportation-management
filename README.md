@@ -6,5 +6,5 @@ This project was started on January 23rd 2021, the initial goal is to create a t
 
 ## Builds
 
-January 23rd 2021 - Initial Build
+January 23rd 2021 - Initial Build  
 February 17th 2021 - Installation of Jest, Selenium-Webdriver, and Nodemon as Dev Dependencies
