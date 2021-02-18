@@ -1,11 +1,17 @@
 {
   "name": "transportation-management",
   "version": "1.0.0",
-  "description": "This project was started on January 23rd 2021, the initial goal is to create a transportation management system (from know on referred to as TMS) to allow users to schedule shipments from US to US desitnations, with addresses manually entered or selected from an address book.",
+  "description": "Simple transportation management system (from know on referred to as TMS) to allow users to schedule shipments from US to US destinations",
   "main": "server/server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server/server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -33,7 +39,7 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "jest": "^26.6.3",
+    "mocha": "^8.3.0",
     "nodemon": "^2.0.7",
     "selenium-webdriver": "^4.0.0-beta.1"
   }
