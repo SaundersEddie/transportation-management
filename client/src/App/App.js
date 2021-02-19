@@ -1,6 +1,7 @@
 import React from 'react';
 import SideMenu from '../components/SideMenu';
 import Header from '../components/Header';
+import PageHeader from '../components/PageHeader';
 
 // import Login from '../pages/Login/Login';
 
@@ -23,6 +24,7 @@ function App() {
       <div className={classes.appMain}>
         <Header />
       </div>
+      <PageHeader />
       <CssBaseline />
     </>
   );

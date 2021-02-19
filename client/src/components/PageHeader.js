@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { Grid, makeStyles } from '@material-ui/core';
 
 
 const useStyles = makeStyles({
@@ -15,7 +15,9 @@ export default function PageHeader() {
 
     return (
         <>
-
+            <Grid container className={classes.root}>
+                <h1>Fnork!</h1>
+            </Grid>
         </>
     )
 }
