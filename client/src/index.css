@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.side-menu {
+/* .side-menu {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -20,4 +20,4 @@ code {
   width: 320px;
   height: 100%;
   background-color: aliceblue;
-}
+} */
