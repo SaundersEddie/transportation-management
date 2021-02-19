@@ -1,13 +1,30 @@
-import Login from '../pages/Login/Login';
+import React from 'react';
+import SideMenu from '../components/SideMenu';
+import Header from '../components/Header';
+
+// import Login from '../pages/Login/Login';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { CssBaseline, makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles({
+  appMain: {
+    paddingLeft: '320px',
+    width: '100%'
+  }
+})
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="container">
-        <Login />
-    </div>
+    <>
+      <SideMenu />
+      <div className={classes.appMain}>
+        <Header />
+      </div>
+      <CssBaseline />
+    </>
   );
 }
 
