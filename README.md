@@ -6,8 +6,14 @@ This project was started on January 23rd 2021, the initial goal is to create a t
 
 ## Builds
 
-January 23rd 2021 - Initial Build  
-February 17th 2021 - Installation of Jest, Selenium-Webdriver, and Nodemon as Dev Dependencies
+| Date               | Build Notes                                                                |
+| :----------------- | :------------------------------------------------------------------------- |
+| January 23rd 2021  | Initial Build                                                              |
+| February 17th 2021 | Installation of Jest, Selenium-Webdriver, and Nodemon as Dev Dependencies. |
+| Febraury 18th 2021 | Installation of Material-UI/core.                                          |
+| February 18th 2021 | Removal of Jest as it wasn't working well, replaced with mocha.            |
+| February 19th 2021 | Installation of Material-UI/icons.                                         |
+| February 19th 2021 | Moved App into it's own folder to clean up initial structure a little.     |
 
 ## Goals
 
