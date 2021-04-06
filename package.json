@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Simple transportation management system (from know on referred to as TMS) to allow users to schedule shipments from US to US destinations",
   "main": "server/server.js",
-  "type": "module",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server/server.js",
@@ -33,6 +32,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "if-env": "^1.0.4",
+    "mongo-session": "^0.2.15",
     "mongoose": "^5.11.13",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
