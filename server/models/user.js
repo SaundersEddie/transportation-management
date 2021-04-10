@@ -1,6 +1,6 @@
 // Our user models
-import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
+const mongoose = require('mongoose');
+const bcrypt = require ('bcrypt');
 
 // Define userSchema
 const userSchema = mongoose.Schema({
@@ -53,4 +53,4 @@ userSchema.pre('save', function (next) {
 
 // Create reference to User & export
 const User = mongoose.model('User', userSchema)
-export default User;
+module.exports = User;

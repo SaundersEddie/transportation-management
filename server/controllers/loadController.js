@@ -1,18 +1,18 @@
-import Load from '../models/load.js';
+const Load = require('../models/load.js');
 
-  export const allLoads = async (req, res) => {
+module.exports = {
+  allLoads: (req, res) => {
     try {
-      const allLoads = await Load.find();
+      const allLoads = Load.find();
       res.status(200).json(allLoads);
     } catch(error) {
       res.status(400).json({message: error.message});
     }
-  }
-
-  export const createLoad = async (req, res) => {
+  },
+  createLoad: (req, res) => {
     console.log ("Creating Load: ", req.body)
     const addLoadBody = req.body;
-    const newLoad = await new Load(addLoadBody);
+    const newLoad = new Load(addLoadBody);
     try {
       newLoad.save();
       res.status(200).json({message: newLoad })
@@ -21,4 +21,4 @@ import Load from '../models/load.js';
       res.status(400).json({message: error.message});
     }
   }
-  
+}

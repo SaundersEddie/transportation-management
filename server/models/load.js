@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require ('mongoose');
 
 const loadSchema = mongoose.Schema({
   shipperDetails: ({
@@ -116,5 +116,5 @@ const loadSchema = mongoose.Schema({
   })
 });
 
-const Load = mongoose.model("Load", loadSchema);
-export default Load;
+const Load = mongoose.model('Load', loadSchema);
+module.exports = Load;
