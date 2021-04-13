@@ -1,3 +1,11 @@
 body {
   background-color: antiquewhite;
 }
+
+.center-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  width: 50%;
+}
