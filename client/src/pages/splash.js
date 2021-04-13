@@ -14,7 +14,7 @@ export default function Splash() {
             <img className = "center-image" src={warningLogo} alt="warning sign"/>
             <h1 align="center">Authourized Users Only</h1>
             <Row className="border-top justify-content-center p-4">
-                <Button align="center" size="lg" variant="outline-primary" onClick={handleShow}>Login Account</Button>
+                <Button align="center" size="lg" variant="outline-primary" onClick={handleShow}>Login</Button>
             </Row>
             <Modal size="lg" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
